@@ -1,10 +1,12 @@
 {
-  "version": "2.0.1",
-  "name": "@lukeed/uuid",
-  "repository": "lukeed/uuid",
+  "version": "2.0.3",
+  "name": "@circuitly/uuid",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "git+https://github.com/circuitly/uuid",
   "description": "A tiny (230B) and fast UUID (v4) generator for Node and the browser",
   "unpkg": "dist/index.min.js",
-  "module": "dist/index.mjs",
   "main": "dist/index.js",
   "types": "index.d.ts",
   "umd:name": "uuid",
@@ -21,20 +23,7 @@
     "build": "bundt",
     "pretest": "npm run build",
     "test": "uvu -r esm test"
-  },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    },
-    "./secure": {
-      "types": "./secure/index.d.ts",
-      "import": "./secure/index.mjs",
-      "require": "./secure/index.js"
-    },
-    "./package.json": "./package.json"
-  },
+  },  
   "files": [
     "*.d.ts",
     "secure",
